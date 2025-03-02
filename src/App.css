@@ -1,0 +1,313 @@
+/* App.css */
+
+/* Estilo del navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  width: 100%;
+  padding: 10px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  padding: 10px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Menú hamburguesa */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .hamburger-menu.active .menu-content {
+    display: flex;
+  }
+}
+
+/* Estilos para el body y el contenido principal */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Hero section y contenido principal */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 70px;
+  flex-grow: 1;
+  width: 100%;
+  padding: 20px;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.social-links a:hover {
+  color: #ff6347;
+}
+
+/* Estilos de Projects */
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  flex-grow: 1;
+  width: 100%;
+  margin-top: 80px; /* Ajusta este valor según la altura del navbar */
+}
+
+.projects ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.projects li {
+  margin: 10px 0;
+}
+
+.projects a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.projects a:hover {
+  color: #ff6347;
+}
+
+/* Estilo para la foto de perfil */
+.profile-photo img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Redes sociales */
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ff6347;
+}
+
+.social-icon svg {
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover svg {
+  transform: scale(1.2);
+}
+
+/* Selector de idiomas */
+.language-selector {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.language-selector img {
+  cursor: pointer;
+  width: 30px;
+  margin: 0 5px;
+}
+
+.language-switcher {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.language-switcher button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.language-switcher button:hover {
+  opacity: 0.7;
+}
+
+/* Página de proyecto */
+.project-page {
+  margin: 2rem;
+  font-family: Arial, sans-serif;
+  margin-top: 80px;
+}
+
+.project-page h1 {
+  color: white;
+  text-decoration: underline;
+}
+
+.project-page .feedback {
+  color: black;
+}
+
+.demo-video iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  margin: 20px 0;
+}
+
+.instructions {
+  margin: 20px 0;
+}
+
+.instructions a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.feedback {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.technologies ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.technologies li {
+  margin-bottom: 10px;
+}
+
+/* Estilos de Projects */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas grandes */
+  gap: 20px; /* Espacio entre las tarjetas */
+  padding: 20px;
+  margin-top: 80px; /* Ajusta este valor según la altura del navbar */
+}
+
+
+@media (max-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+  }
+}
+
+
+/* Estilo para cada proyecto */
+.project {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  height: 300px;
+  text-align: center;
+  color: #000; /* Hace que el texto dentro del proyecto sea negro */
+}
+
+/* Asegura que las imágenes no se distorsionen y estén centradas */
+.project-icon {
+  width: 192px;
+  height: 192px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.project h2 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #000; /* Título en negro */
+}
+
+.project p {
+  color: #000; /* Descripción en negro */
+  margin-bottom: 10px;
+}
+
+.project a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
