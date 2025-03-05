@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { PillTabs } from './PillTabs.jsx'; // Asegúrate de importar PillTabs
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,8 +13,7 @@ const Navbar = () => {
     <nav>
       <div className="navbar">
         <div className="navbar-links">
-          <Link to="/">Home</Link>
-          <Link to="/projects">Projects</Link>
+          <PillTabs />  
         </div>
         <div className={`hamburger-menu ${isMenuOpen ? 'active' : ''}`}>
           <button onClick={toggleMenu}>☰</button>
